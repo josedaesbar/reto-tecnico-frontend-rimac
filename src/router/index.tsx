@@ -1,7 +1,6 @@
 import {Route, redirect} from 'react-router-dom'
 import {Routes, BrowserRouter} from 'react-router-dom'
 import HomePage from '../components/pages/Home'
-import ArmaTuPlanPage from '../components/pages/ArmaTuPlan'
 import {useAppSelector} from '../redux'
 import PrivateRoutes from './privateRoutes'
 
