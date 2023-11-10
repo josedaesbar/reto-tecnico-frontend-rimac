@@ -1,16 +1,23 @@
 import styles from './styles.module.scss'
 
 import {useRef, useState} from 'react'
+import {useNavigate} from 'react-router-dom'
+
 import {ReactComponent as ICONArrowDown} from '../../../assets/icons/arrow-down.svg'
 import {Anchor, Span} from '../../atoms/Text'
-
 import InputValidated from '../../molecules/InputValidated'
 import {useGetClassnames} from '../../../hooks/useGetClassnames'
 import Button from '../../atoms/Button'
-
-type DocumentType = 'DNI' | 'RUC'
+import {useAppDispatch, useAppSelector} from '../../../redux'
+import {A_GET_USER_DATA, A_SET_USER} from '../../../redux/user/actions'
+import {DocumentType} from '../../../core/models/user.model'
 
 const HomeRightSide = () => {
+  const dispatch = useAppDispatch()
+  const userStore = useAppSelector((v) => v.user)
+
+  const navigate = useNavigate()
+
   const documentRef = useRef<HTMLInputElement>(null)
   const phoneRef = useRef<HTMLInputElement>(null)
   const plateRef = useRef<HTMLInputElement>(null)
@@ -34,7 +41,12 @@ const HomeRightSide = () => {
     setIsActivePolicy(false)
   }
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
+    if (userStore.stateLoadingFetch.getUserState === 'loading') {
+      alert('CARGANDO')
+      return
+    }
+
     let isOkey: boolean = true
 
     if (documentRef.current?.value === '') {
@@ -65,9 +77,26 @@ const HomeRightSide = () => {
       setCheckError('')
     }
 
-    if (isOkey === false) {
-      // alert('Incomplete')
+    if (isOkey === false) return
+
+    const userFetchedData = await dispatch(A_GET_USER_DATA()).unwrap()
+
+    if (userFetchedData.payload === undefined) {
+      alert('ERROR')
+      return
     }
+
+    dispatch(
+      A_SET_USER({
+        ...userFetchedData.payload,
+        documentType: typeDocument,
+        document: documentRef.current!.value,
+        phone: phoneRef.current!.value,
+        plate: plateRef.current!.value,
+      })
+    )
+
+    navigate('/arma-tu-plan')
   }
 
   return (

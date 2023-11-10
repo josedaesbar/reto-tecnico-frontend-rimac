@@ -1,12 +1,12 @@
 import {FetchStateType} from './app.model'
 
-export interface UserEntity {
-  dni: string
+export type DocumentType = 'DNI' | 'RUC'
+
+export interface UserEntity extends UserGetDataType {
+  documentType: DocumentType
+  document: string
   phone: string
   plate: string
-
-  name: string
-  email: string
 }
 
 export interface UserPlanEntity {}
