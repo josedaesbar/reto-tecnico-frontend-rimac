@@ -6,7 +6,7 @@ import {FC, PropsWithChildren} from 'react'
 
 type TextPropTypes = {
   size: '12' | '14' | '16' | '18' | '20' | '22' | '24' | '26' | '28' | '30' | '36'
-  color: 'black' | 'white' | 'red' | 'gray'
+  color: 'black' | 'white' | 'red' | 'gray' | 'blue'
   weight?: 'regular' | 'medium' | 'semi-bold' | 'bold' | 'extra-bold'
   align?: 'left' | 'center' | 'right'
   uppercase?: boolean
