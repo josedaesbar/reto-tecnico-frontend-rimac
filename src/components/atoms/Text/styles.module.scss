@@ -1,0 +1,97 @@
+.text {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+// SIZES
+.text-size-12 {
+  font-size: 12px;
+}
+.text-size-14 {
+  font-size: 14px;
+}
+.text-size-16 {
+  font-size: 16px;
+}
+.text-size-18 {
+  font-size: 18px;
+}
+.text-size-20 {
+  font-size: 20px;
+}
+.text-size-22 {
+  font-size: 22px;
+}
+.text-size-24 {
+  font-size: 24px;
+}
+.text-size-26 {
+  font-size: 26px;
+}
+.text-size-28 {
+  font-size: 28px;
+}
+.text-size-30 {
+  font-size: 30px;
+}
+.text-size-36 {
+  font-size: 36px;
+}
+
+// ALIGN
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+
+// VARIANTS
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-inline {
+  display: inline;
+}
+.text-underline {
+  text-decoration: underline;
+}
+
+// COLORS
+
+.text-color-black {
+  color: #000000;
+}
+.text-color-white {
+  color: #ffffff;
+}
+.text-color-red {
+  color: #ff1c44;
+}
+.text-color-gray {
+  color: #494f66;
+}
+
+// WEIGHT
+.text-weight-regular {
+  font-weight: 400;
+}
+
+.text-weight-medium {
+  font-weight: 500;
+}
+
+.text-weight-semi-bold {
+  font-weight: 600;
+}
+
+.text-weight-bold {
+  font-weight: 700;
+}
+
+.text-weight-extra-bold {
+  font-weight: 800;
+}

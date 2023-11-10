@@ -1,0 +1,23 @@
+.button {
+  width: 100%;
+  height: 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+
+  cursor: pointer;
+  user-select: none;
+
+  border: none;
+  outline: none;
+}
+
+.button-red {
+  background-color: #ff1c44;
+
+  &:hover {
+    background-color: #ff002f;
+  }
+}
