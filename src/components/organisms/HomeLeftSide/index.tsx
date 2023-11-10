@@ -2,11 +2,15 @@ import styles from './styles.module.scss'
 
 import IMG_BackgroundLeft from '../../../assets/images/background.png'
 import IMG_Left_Desktop from '../../../assets/images/home_left_desktop.png'
+import IMG_Left_Mobile from '../../../assets/images/home_left_mobile.png'
 import {Paragraph} from '../../atoms/Text'
 
 const HomeLeftSide = () => {
   return (
     <div className={styles['left-container']}>
+      <div className={styles['left-image-mobile']}>
+        <img src={IMG_Left_Mobile} alt='' />
+      </div>
       <div className={styles['left-background']}>
         <img className={styles['left-background-image']} src={IMG_BackgroundLeft} alt='' />
         <img className={styles['left-desktop']} src={IMG_Left_Desktop} alt='' />

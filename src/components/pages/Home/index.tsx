@@ -23,6 +23,9 @@ const HomePage = () => {
               <Span color='blue' size='14'>
                 (01) 411 6001
               </Span>
+              <Span color='blue' size='18' weight='semi-bold'>
+                Llámanos
+              </Span>
             </div>
           </div>
         </div>

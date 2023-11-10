@@ -179,3 +179,37 @@
     grid-column: 20/ 33;
   }
 }
+
+@media (max-width: 875px) {
+  .right-container {
+    width: 100%;
+    grid-row: 3 / 4;
+    grid-column: 1/ 38;
+
+    & .left-inputs {
+      & .input-select-container {
+        grid-template-columns: repeat(37, 1fr);
+
+        & .input-toggle-container {
+          grid-column: 1 / 13;
+        }
+        & input {
+          grid-column: 13 / 38;
+        }
+
+        & .document-error {
+          grid-column: 1 / 38;
+        }
+      }
+    }
+
+    & .button-submit {
+      display: grid;
+      grid-template-columns: repeat(37, 1fr);
+
+      & button {
+        grid-column: 1 / 38;
+      }
+    }
+  }
+}
