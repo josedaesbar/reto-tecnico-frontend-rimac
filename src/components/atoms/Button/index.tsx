@@ -2,6 +2,7 @@ import styles from './styles.module.scss'
 
 import {useGetClassnames} from '../../../hooks/useGetClassnames'
 import {Span} from '../Text'
+import {memo} from 'react'
 
 type ButtonProps = {
   onClick(): void
@@ -22,4 +23,4 @@ const Button = ({color, onClick, text}: ButtonProps) => {
   )
 }
 
-export default Button
+export default memo(Button)

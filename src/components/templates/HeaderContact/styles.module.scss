@@ -1,29 +1,17 @@
 .header {
-  position: relative;
+  width: 100vw;
+  position: absolute;
+  height: 64px;
 
-  height: 100px;
+  top: 0;
+  left: 0;
 
-  &::before {
-    content: '';
-
-    position: fixed;
-    width: 100vw;
-    height: 1px;
-
-    background-color: #d7dbf5;
-
-    top: 100px;
-    left: 0;
-  }
+  background-color: transparent;
 
   z-index: 150;
 
-  grid-column: 1 / 38;
-
-  display: grid;
-  grid-template-columns: repeat(37, 1fr);
-
-  align-content: center;
+  display: flex;
+  align-items: center;
 
   & .logo {
     grid-column: 2 / 5;
@@ -58,32 +46,21 @@
   }
 }
 
-.header-absolute {
-  position: absolute;
-  width: 100%;
+.header-header_background {
+  background-color: #fff;
 
-  &::before {
-    content: '';
-
-    position: fixed;
-    width: 0;
-    height: 0;
-
-    background-color: transparent;
-  }
+  border-bottom: 1px solid #d7dbf5;
+  box-sizing: border-box;
 }
 
 @media (max-width: 875px) {
   .header {
+    width: 100%;
     height: 70px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &::before {
-      top: 70px;
-    }
 
     & .logo {
       height: 16px;

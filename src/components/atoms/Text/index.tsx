@@ -2,7 +2,7 @@ import {useGetClassnames} from '../../../hooks/useGetClassnames'
 import styles from './styles.module.scss'
 
 // import classNames from "classnames";
-import {FC, PropsWithChildren} from 'react'
+import {FC, PropsWithChildren, memo} from 'react'
 
 type TextPropTypes = {
   size: '12' | '14' | '16' | '18' | '20' | '22' | '24' | '26' | '28' | '30' | '36'

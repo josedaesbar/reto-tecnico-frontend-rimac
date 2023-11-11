@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 
-import {forwardRef} from 'react'
+import {forwardRef, memo} from 'react'
 
 export type InputProps = {
   type: 'text' | 'number' | 'password'
@@ -11,4 +11,4 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({type = 'text', placehol
   return <input className={styles['container']} placeholder={placeholder} type={type} ref={ref} />
 })
 
-export default Input
+export default memo(Input)
