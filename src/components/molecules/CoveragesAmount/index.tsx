@@ -7,9 +7,16 @@ import Button from '../../atoms/Button'
 import {useAppSelector} from '../../../redux'
 
 import {memo} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 const CoveragesAmount = () => {
   const userCoverages = useAppSelector((v) => v.userCoverages)
+
+  const navigate = useNavigate()
+
+  const onClickNext = () => {
+    navigate('/gracias')
+  }
 
   return (
     <div className={styles['container']}>
@@ -61,7 +68,7 @@ const CoveragesAmount = () => {
       </div>
 
       <div className={styles['button-go']}>
-        <Button color='red' text='Lo quiero' onClick={() => {}} />
+        <Button color='red' text='Lo quiero' onClick={onClickNext} />
       </div>
     </div>
   )
