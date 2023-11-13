@@ -1,5 +1,7 @@
 # RETO TÉCNICO FRONTEND RIMAC
 
+Puedes ver la demo [aquí](https://reto-tecnico-rimac-josedaesbar.netlify.app): https://reto-tecnico-rimac-josedaesbar.netlify.app
+
 ## Librerías
 
 - **typescript** - Para tener un orden sobre los parametros y tener el autocompletados que son muy utiles al momento de desarrollar o revisar código.
