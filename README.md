@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# RETO TÉCNICO FRONTEND RIMAC
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Librerías
 
-## Available Scripts
+- **typescript** - Para tener un orden sobre los parametros y tener el autocompletados que son muy utiles al momento de desarrollar o revisar código.
+- **redux y redux toolkit** - Se utilizaron para tener los datos del usuario en cualquier lugar requerido y evitar prop drilling
+- **axios** - Para poder manejar las request más comodamente
+- **sass** - Para manejar los estilos con más orden
+- **eslint** - Para tener reglas de código.
+- **prettier** - Para mentener un solo estilo de codigo en todo el proyecto y evitar problemas de legibilidad
 
-In the project directory, you can run:
+## Tareas
 
-### `npm start`
+Antes de comenzar a realizar el código del proyecto analicé el Figma para identificar que componentes serían nececesarios.
+Tambien para analizar que funcionalidades eran requeridas y poder planificar el tipado que tendría que dar a ciertas interfaces
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Luego de analizar y planificar se comenzó a crear el respositorio y crear la estructura del proyecto. En esta instalaron librerías y crearon interfaces principales.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Luego de crear la estructura se procedieron a crear los primeros componentes basicos que serían los que se realizarían a lo largo del proyecto.
 
-### `npm test`
+Con todo lo previamente hecho procedemos a crear las pantallas y funcionalidades requeridas. A medida que vamos creando pantallas tambien vamos creando componentes secundarios para hacer legible el código.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Inicializar proyecto
 
-### `npm run build`
+Para iniciar el proyecto, clonen el respositorio e instalen las dependencias con `npm install` luego inicien normalmente con `npm run start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+También es necesario añadir las extensiones de:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **ESLint**
+- **Prettier - Code formatter**
+  Esas extensiones son necesarias para poder aplicar correctamente las reglas de codigo y formateo de codigo. De esta manera poder tener una legibilidad optima.

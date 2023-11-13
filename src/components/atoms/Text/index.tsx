@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 // import classNames from "classnames";
 import {FC, PropsWithChildren} from 'react'
 
-type TextPropTypes = {
+export type TextPropTypes = {
   font?: 'lato' | 'opensans' | 'roboto'
   size: '10' | '12' | '14' | '16' | '18' | '20' | '22' | '24' | '26' | '28' | '30' | '36'
   color: 'black' | 'white' | 'red' | 'gray' | 'blue' | 'skyblue-light' | 'gray-2'
