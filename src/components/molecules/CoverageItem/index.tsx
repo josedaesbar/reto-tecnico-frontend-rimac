@@ -15,6 +15,7 @@ import {
   ID_CHOQUE_LUZ_ROJA,
   ID_LLANTA_ROBADA,
 } from '../../../application/utils/constants'
+import {useGetClassnames} from '../../../hooks/useGetClassnames'
 
 type CoverageItemProps = {
   data: CoverageItemType
@@ -92,11 +93,48 @@ const CoverageItem = ({data}: CoverageItemProps) => {
             {data.description}
           </Paragraph>
         )}
+
+        <div
+          className={useGetClassnames([
+            styles['toggle-text-mobile'],
+            isTextVisible
+              ? styles['toggle-text-mobile-active']
+              : styles['toggle-text-mobile-inactive'],
+          ])}
+          onClick={toggleText}
+        >
+          {isTextVisible ? (
+            <>
+              <Paragraph font='lato' weight='semi-bold' color='skyblue-light' size='10' uppercase>
+                Ver menos
+              </Paragraph>
+              <ICONArrowTop />
+            </>
+          ) : (
+            <>
+              <Paragraph font='lato' weight='semi-bold' color='blue' size='10' uppercase>
+                Ver más
+              </Paragraph>
+              <ICONArrowBottom />
+            </>
+          )}
+        </div>
       </div>
 
       <div className={styles['coverage-button-right']}>
         <div className={styles['coverage-toggle-text']} onClick={toggleText}>
           {isTextVisible ? <ICONArrowTop /> : <ICONArrowBottom />}
+        </div>
+        <div
+          className={useGetClassnames([
+            styles['coverage-control-mobile'],
+            isAddedCoverage
+              ? styles['coverage-control-mobile-active']
+              : styles['coverage-control-mobile-inactive'],
+          ])}
+          onClick={toggleUserCoverage}
+        >
+          <div></div>
         </div>
       </div>
     </div>

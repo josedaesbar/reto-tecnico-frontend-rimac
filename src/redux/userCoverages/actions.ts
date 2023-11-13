@@ -5,5 +5,6 @@ export const A_ADD_COVERAGES = createAction<CoverageItemType>('user-coverages/ad
 export const A_REMOVE_COVERAGES = createAction<CoverageItemType>('user-coverages/remove-coverages')
 
 export const A_SET_AMOUNT = createAction<number>('user-coverages/set-amount')
+export const A_RESET_USER_COVERAGES = createAction('user-coverages/reset')
 
 export const A_SET_TOTAL_INSURED = createAction<number>('user-coverages/set-total-insured')
