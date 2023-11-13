@@ -4,7 +4,7 @@ import IMG_Gracias from '../../../assets/images/gracias-image.png'
 import IMG_Gracias_Man_Mobile from '../../../assets/images/gracias-mobile-man.png'
 
 import PagesContainer from '../../templates/PagesContainer'
-import {Paragraph} from '../../atoms/Text'
+import {Paragraph, Span} from '../../atoms/Text'
 import {useAppSelector} from '../../../redux'
 import Button from '../../atoms/Button'
 
@@ -47,6 +47,12 @@ const GraciasPage = () => {
 
         <div className={styles['button-use-insurance']}>
           <Button color='red' text='Cómo usar mi seguro' onClick={() => {}} />
+        </div>
+
+        <div className={styles['copy-container']}>
+          <Span font='roboto' size='12' color='skyblue-light'>
+            © 2021 RIMAC Seguros y Reaseguros.
+          </Span>
         </div>
       </div>
     </PagesContainer>
