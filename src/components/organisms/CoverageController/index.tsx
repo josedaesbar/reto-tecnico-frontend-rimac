@@ -4,7 +4,7 @@ import {useState} from 'react'
 
 import {Paragraph} from '../../atoms/Text'
 import {CoverageList} from '../../../application/utils/coverageList'
-import {useGetClassnames as UseGetClassnames} from '../../../utils/useGetClassnames'
+import {getClassnames as getClassnames} from '../../../utils/getClassnames'
 import CoverageItem from '../../molecules/CoverageItem'
 
 const CoverageController = () => {
@@ -24,7 +24,7 @@ const CoverageController = () => {
         {CoverageList.map((v, i) => {
           return (
             <div
-              className={UseGetClassnames([
+              className={getClassnames([
                 styles['type-coverage-item'],
                 coverageType === i && styles['type-coverage-item-active'],
               ])}

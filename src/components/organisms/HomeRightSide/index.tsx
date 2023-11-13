@@ -5,7 +5,7 @@ import {useState} from 'react'
 import {ReactComponent as ICONArrowDown} from '../../../assets/icons/arrow-down.svg'
 import {Anchor, Span} from '../../atoms/Text'
 import InputValidated from '../../molecules/InputValidated'
-import {useGetClassnames} from '../../../utils/useGetClassnames'
+import {getClassnames} from '../../../utils/getClassnames'
 import Button from '../../atoms/Button'
 import {useHomeForm} from '../../../hooks/useHomeForm'
 
@@ -75,7 +75,7 @@ const HomeRightSide = () => {
 
       <div className={styles['accept-policy-container']}>
         <div
-          className={useGetClassnames([
+          className={getClassnames([
             styles['check-policy'],
             isActivePolicy && styles['check-policy-active'],
           ])}

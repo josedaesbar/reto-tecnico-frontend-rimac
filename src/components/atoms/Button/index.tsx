@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 
-import {useGetClassnames} from '../../../utils/useGetClassnames'
+import {getClassnames} from '../../../utils/getClassnames'
 import {Span} from '../Text'
 import {memo} from 'react'
 
@@ -13,7 +13,7 @@ type ButtonProps = {
 const Button = ({color, onClick, text}: ButtonProps) => {
   return (
     <button
-      className={useGetClassnames([styles['button'], styles['button-' + color]])}
+      className={getClassnames([styles['button'], styles['button-' + color]])}
       onClick={onClick}
     >
       <Span color='white' size='16' uppercase>

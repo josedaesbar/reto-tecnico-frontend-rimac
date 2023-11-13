@@ -1,4 +1,4 @@
-export const useFormatNumber = (data: number) => {
+export const formatNumber = (data: number) => {
   // Verificar si el número es mayor que 1000
   if (data > 1000) {
     // Convertir el número a una cadena y dividirlo en partes de tres dígitos

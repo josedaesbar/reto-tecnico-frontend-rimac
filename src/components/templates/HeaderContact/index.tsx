@@ -4,7 +4,7 @@ import IMG_Logo from '../../../assets/images/Logo.png'
 import {ReactComponent as ICONPhone} from '../../../assets/icons/ic_phone.svg'
 
 import {Span} from '../../atoms/Text'
-import {useGetClassnames} from '../../../utils/useGetClassnames'
+import {getClassnames} from '../../../utils/getClassnames'
 import ContentGrid from '../ContentGrid'
 
 export type HeaderContactProps = {
@@ -14,7 +14,7 @@ export type HeaderContactProps = {
 const HeaderContact = ({header_background}: HeaderContactProps) => {
   return (
     <div
-      className={useGetClassnames([
+      className={getClassnames([
         styles['header'],
         header_background && styles['header-header_background'],
       ])}

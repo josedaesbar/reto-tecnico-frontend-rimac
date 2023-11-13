@@ -7,6 +7,7 @@ export interface UserEntity extends UserGetDataType {
   document: string
   phone: string
   plate: string
+  carName: string
 }
 
 export interface UserPlanEntity {}

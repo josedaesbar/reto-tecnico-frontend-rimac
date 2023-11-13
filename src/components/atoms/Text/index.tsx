@@ -1,4 +1,4 @@
-import {useGetClassnames} from '../../../utils/useGetClassnames'
+import {getClassnames} from '../../../utils/getClassnames'
 import styles from './styles.module.scss'
 
 // import classNames from "classnames";
@@ -26,7 +26,7 @@ export const Paragraph: FC<PropsWithChildren<TextPropTypes>> = ({
   font,
   children,
 }) => {
-  const classnames = useGetClassnames([
+  const classnames = getClassnames([
     styles.text,
     styles['text-size-' + size],
     styles['text-color-' + color],
@@ -52,7 +52,7 @@ export const H1: FC<PropsWithChildren<TextPropTypes>> = ({
   font,
   children,
 }) => {
-  const classnames = useGetClassnames([
+  const classnames = getClassnames([
     styles.text,
     styles['text-size-' + size],
     styles['text-color-' + color],
@@ -78,7 +78,7 @@ export const Span: FC<PropsWithChildren<TextPropTypes>> = ({
   font,
   children,
 }) => {
-  const classnames = useGetClassnames([
+  const classnames = getClassnames([
     styles.text,
     styles['text-size-' + size],
     styles['text-color-' + color],
@@ -104,7 +104,7 @@ export const Label: FC<PropsWithChildren<TextPropTypes>> = ({
   font,
   children,
 }) => {
-  const classnames = useGetClassnames([
+  const classnames = getClassnames([
     styles.text,
     styles['text-size-' + size],
     styles['text-color-' + color],
@@ -135,7 +135,7 @@ export const Anchor: FC<PropsWithChildren<AnchorPropTypes>> = ({
   href,
   children,
 }) => {
-  const classnames = useGetClassnames([
+  const classnames = getClassnames([
     styles.text,
     styles['text-size-' + size],
     styles['text-color-' + color],

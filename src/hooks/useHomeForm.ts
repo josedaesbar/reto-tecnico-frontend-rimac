@@ -3,6 +3,7 @@ import {DocumentType} from '../application/core/models/user.model'
 import {useAppDispatch, useAppSelector} from '../redux'
 import {A_GET_USER_DATA, A_SET_USER} from '../redux/user/actions'
 import {useNavigate} from 'react-router-dom'
+import {getCarName} from '../utils/getCarName'
 
 export const useHomeForm = () => {
   const dispatch = useAppDispatch()
@@ -83,6 +84,7 @@ export const useHomeForm = () => {
         document: documentRef.current!.value,
         phone: phoneRef.current!.value,
         plate: plateRef.current!.value,
+        carName: getCarName(),
       })
     )
 

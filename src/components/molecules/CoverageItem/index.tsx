@@ -15,7 +15,7 @@ import {
   ID_CHOQUE_LUZ_ROJA,
   ID_LLANTA_ROBADA,
 } from '../../../application/utils/constants'
-import {useGetClassnames} from '../../../utils/useGetClassnames'
+import {getClassnames} from '../../../utils/getClassnames'
 
 type CoverageItemProps = {
   data: CoverageItemType
@@ -95,7 +95,7 @@ const CoverageItem = ({data}: CoverageItemProps) => {
         )}
 
         <div
-          className={useGetClassnames([
+          className={getClassnames([
             styles['toggle-text-mobile'],
             isTextVisible
               ? styles['toggle-text-mobile-active']
@@ -126,7 +126,7 @@ const CoverageItem = ({data}: CoverageItemProps) => {
           {isTextVisible ? <ICONArrowTop /> : <ICONArrowBottom />}
         </div>
         <div
-          className={useGetClassnames([
+          className={getClassnames([
             styles['coverage-control-mobile'],
             isAddedCoverage
               ? styles['coverage-control-mobile-active']

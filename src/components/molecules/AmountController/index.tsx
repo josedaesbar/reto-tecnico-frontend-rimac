@@ -13,7 +13,7 @@ import {
   MIN_AMOUNT_INSURED,
 } from '../../../application/utils/constants'
 import {A_REMOVE_COVERAGES, A_SET_TOTAL_INSURED} from '../../../redux/userCoverages/actions'
-import {useFormatNumber} from '../../../utils/useFormatNumber'
+import {formatNumber} from '../../../utils/formatNumber'
 import {CoverageList} from '../../../application/utils/coverageList'
 
 const AmountController = () => {
@@ -56,11 +56,11 @@ const AmountController = () => {
         </Paragraph>
         <div className={styles['amount-min-max']}>
           <Span color='gray-2' size='16'>
-            MIN ${useFormatNumber(MIN_AMOUNT_INSURED)}
+            MIN ${formatNumber(MIN_AMOUNT_INSURED)}
           </Span>
           <div></div>
           <Span color='gray-2' size='16'>
-            MAX ${useFormatNumber(MAX_AMOUNT_INSURED)}
+            MAX ${formatNumber(MAX_AMOUNT_INSURED)}
           </Span>
         </div>
       </div>
@@ -70,7 +70,7 @@ const AmountController = () => {
           <ICONSusbtract />
         </div>
         <Span color='gray' size='16'>
-          ${useFormatNumber(userCoverages.totalInsured)}
+          ${formatNumber(userCoverages.totalInsured)}
         </Span>
         <div className={styles['amount-controller-icon']} onClick={onClickPlus}>
           <ICONPLus />

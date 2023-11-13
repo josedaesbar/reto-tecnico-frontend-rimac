@@ -36,7 +36,7 @@ const EstarBienGreetings = () => {
               Placa: {userStore.user?.plate}
             </Paragraph>
             <Paragraph color='black' size='20'>
-              Wolkswagen 2019 Golf
+              {userStore.user?.carName}
             </Paragraph>
           </div>
         </div>
