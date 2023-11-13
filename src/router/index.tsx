@@ -1,4 +1,4 @@
-import {Route, redirect} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import {Routes, BrowserRouter} from 'react-router-dom'
 import HomePage from '../components/pages/Home'
 import {useAppSelector} from '../redux'
@@ -7,17 +7,11 @@ import PrivateRoutes from './privateRoutes'
 const AppRoutes = () => {
   const userStore = useAppSelector((v) => v.user)
 
-  redirect('/aea')
-
   return (
-    <BrowserRouter
-    // basename={PUBLIC_URL}
-    >
+    <BrowserRouter>
       {userStore.user === null ? (
         <Routes>
-          <Route path='/'>
-            <Route path='/' element={<HomePage />} />
-          </Route>
+          <Route path='*' element={<HomePage />}></Route>
         </Routes>
       ) : (
         <PrivateRoutes />

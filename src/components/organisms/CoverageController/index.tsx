@@ -4,7 +4,7 @@ import {useState} from 'react'
 
 import {Paragraph} from '../../atoms/Text'
 import {CoverageList} from '../../../application/utils/coverageList'
-import {useGetClassnames as UseGetClassnames} from '../../../hooks/useGetClassnames'
+import {useGetClassnames as UseGetClassnames} from '../../../utils/useGetClassnames'
 import CoverageItem from '../../molecules/CoverageItem'
 
 const CoverageController = () => {

@@ -1,7 +1,6 @@
 import styles from './styles.module.scss'
 
 import IMG_Gracias from '../../../assets/images/gracias-image.png'
-import IMG_Gracias_Back from '../../../assets/images/gracias-mobile-background.png'
 import IMG_Gracias_Man_Mobile from '../../../assets/images/gracias-mobile-man.png'
 
 import PagesContainer from '../../templates/PagesContainer'

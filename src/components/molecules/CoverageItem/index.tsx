@@ -15,7 +15,7 @@ import {
   ID_CHOQUE_LUZ_ROJA,
   ID_LLANTA_ROBADA,
 } from '../../../application/utils/constants'
-import {useGetClassnames} from '../../../hooks/useGetClassnames'
+import {useGetClassnames} from '../../../utils/useGetClassnames'
 
 type CoverageItemProps = {
   data: CoverageItemType

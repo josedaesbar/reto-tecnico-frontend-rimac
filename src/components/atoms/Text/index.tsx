@@ -1,4 +1,4 @@
-import {useGetClassnames} from '../../../hooks/useGetClassnames'
+import {useGetClassnames} from '../../../utils/useGetClassnames'
 import styles from './styles.module.scss'
 
 // import classNames from "classnames";

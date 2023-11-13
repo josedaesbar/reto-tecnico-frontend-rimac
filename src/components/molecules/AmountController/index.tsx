@@ -13,7 +13,7 @@ import {
   MIN_AMOUNT_INSURED,
 } from '../../../application/utils/constants'
 import {A_REMOVE_COVERAGES, A_SET_TOTAL_INSURED} from '../../../redux/userCoverages/actions'
-import {useFormatNumber} from '../../../hooks/useFormatNumber'
+import {useFormatNumber} from '../../../utils/useFormatNumber'
 import {CoverageList} from '../../../application/utils/coverageList'
 
 const AmountController = () => {

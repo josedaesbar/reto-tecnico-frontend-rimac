@@ -4,7 +4,7 @@ import IMG_Logo from '../../../assets/images/Logo.png'
 import {ReactComponent as ICONPhone} from '../../../assets/icons/ic_phone.svg'
 
 import {Span} from '../../atoms/Text'
-import {useGetClassnames} from '../../../hooks/useGetClassnames'
+import {useGetClassnames} from '../../../utils/useGetClassnames'
 import ContentGrid from '../ContentGrid'
 
 export type HeaderContactProps = {

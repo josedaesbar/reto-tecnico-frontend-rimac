@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 
-import {useGetClassnames} from '../../../hooks/useGetClassnames'
+import {useGetClassnames} from '../../../utils/useGetClassnames'
 import {Span} from '../Text'
 import {memo} from 'react'
 
