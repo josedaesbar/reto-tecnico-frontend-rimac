@@ -28,4 +28,5 @@ También es necesario añadir las extensiones de:
 
 - **ESLint**
 - **Prettier - Code formatter**
-  Esas extensiones son necesarias para poder aplicar correctamente las reglas de codigo y formateo de codigo. De esta manera poder tener una legibilidad optima.
+
+Esas extensiones son necesarias para poder aplicar correctamente las reglas de codigo y formateo de codigo. De esta manera poder tener una legibilidad optima.
