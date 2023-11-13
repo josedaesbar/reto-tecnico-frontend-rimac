@@ -63,6 +63,7 @@
     align-items: center;
 
     & .logo {
+      grid-column: 1 / 5;
       height: 16px;
 
       & img {
@@ -72,6 +73,9 @@
     }
 
     & .contact {
+      grid-column: 25 / 38;
+      column-gap: 0;
+
       & span:nth-child(1) {
         display: none;
       }
