@@ -1,0 +1,130 @@
+.container {
+  margin-top: 120px;
+  width: 100%;
+
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-auto-flow: row;
+
+  & .amount-text {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: min-content;
+    row-gap: 10px;
+
+    & > div {
+      & p:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+  & .line-separetor {
+    width: 100%;
+    height: 1px;
+    background-color: #d7dbf5;
+
+    margin: 25px 0;
+  }
+
+  & .price-details {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    row-gap: 15px;
+
+    list-style: none;
+
+    & .price-contains {
+      display: grid;
+      grid-auto-flow: row;
+      grid-auto-rows: min-content;
+      row-gap: 10px;
+
+      & .price-item {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        column-gap: 12.5px;
+
+        align-items: center;
+        align-content: center;
+      }
+    }
+  }
+
+  & .button-go {
+    margin-top: 35px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 875px) {
+  .container {
+    position: relative;
+    height: 76px;
+    width: 100%;
+    margin-top: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .amount-text {
+      & > p:nth-child(1) {
+        display: none;
+      }
+      & > div {
+        & p:nth-child(1) {
+          font-size: 24px;
+        }
+        & p:nth-child(2) {
+          display: none;
+        }
+        & p:nth-child(3) {
+          display: block;
+        }
+      }
+    }
+
+    & .line-separetor {
+      display: none;
+    }
+
+    & .price-details {
+      display: none;
+    }
+
+    & .button-go {
+      width: 168px;
+
+      box-sizing: border-box;
+      margin: 0;
+
+      & button {
+        height: 44px;
+        & span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    & ::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100vw;
+
+      background-color: rgb(173, 170, 243, 0.45);
+
+      top: 0;
+      left: -40px;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    & ::before {
+      left: -20px;
+    }
+  }
+}

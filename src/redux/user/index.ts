@@ -1,6 +1,6 @@
 import {createReducer} from '@reduxjs/toolkit'
 import {A_GET_USER_DATA, A_SET_USER} from './actions'
-import {UserStore} from '../../core/models/user.model'
+import {UserStore} from '../../application/core/models/user.model'
 
 const initialState: UserStore = {
   user: null,

@@ -10,7 +10,7 @@ import {useGetClassnames} from '../../../hooks/useGetClassnames'
 import Button from '../../atoms/Button'
 import {useAppDispatch, useAppSelector} from '../../../redux'
 import {A_GET_USER_DATA, A_SET_USER} from '../../../redux/user/actions'
-import {DocumentType} from '../../../core/models/user.model'
+import {DocumentType} from '../../../application/core/models/user.model'
 
 const HomeRightSide = () => {
   const dispatch = useAppDispatch()

@@ -32,6 +32,10 @@ const EstarBienSteps = () => {
           </Span>
         </div>
       </div>
+
+      <div className={styles['left-content-mobile']}>
+        <p>mobile</p>
+      </div>
     </div>
   )
 }

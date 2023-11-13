@@ -2,11 +2,12 @@ import {useGetClassnames} from '../../../hooks/useGetClassnames'
 import styles from './styles.module.scss'
 
 // import classNames from "classnames";
-import {FC, PropsWithChildren, memo} from 'react'
+import {FC, PropsWithChildren} from 'react'
 
 type TextPropTypes = {
-  size: '12' | '14' | '16' | '18' | '20' | '22' | '24' | '26' | '28' | '30' | '36'
-  color: 'black' | 'white' | 'red' | 'gray' | 'blue' | 'skyblue-light'
+  font?: 'lato' | 'opensans' | 'roboto'
+  size: '10' | '12' | '14' | '16' | '18' | '20' | '22' | '24' | '26' | '28' | '30' | '36'
+  color: 'black' | 'white' | 'red' | 'gray' | 'blue' | 'skyblue-light' | 'gray-2'
   weight?: 'regular' | 'medium' | 'semi-bold' | 'bold' | 'extra-bold'
   align?: 'left' | 'center' | 'right'
   uppercase?: boolean
@@ -22,6 +23,7 @@ export const Paragraph: FC<PropsWithChildren<TextPropTypes>> = ({
   align = 'left',
   inline,
   underline,
+  font,
   children,
 }) => {
   const classnames = useGetClassnames([
@@ -33,6 +35,7 @@ export const Paragraph: FC<PropsWithChildren<TextPropTypes>> = ({
     uppercase && styles['text-uppercase'],
     underline && styles['text-underline'],
     inline && styles['text-inline'],
+    font && styles['font-' + font],
   ])
 
   return <p className={classnames}>{children}</p>
@@ -46,6 +49,7 @@ export const H1: FC<PropsWithChildren<TextPropTypes>> = ({
   align = 'left',
   inline,
   underline,
+  font,
   children,
 }) => {
   const classnames = useGetClassnames([
@@ -57,6 +61,7 @@ export const H1: FC<PropsWithChildren<TextPropTypes>> = ({
     uppercase && styles['text-uppercase'],
     underline && styles['text-underline'],
     inline && styles['text-inline'],
+    font && styles['font-' + font],
   ])
 
   return <h1 className={classnames}>{children}</h1>
@@ -70,6 +75,7 @@ export const Span: FC<PropsWithChildren<TextPropTypes>> = ({
   align = 'left',
   inline,
   underline,
+  font,
   children,
 }) => {
   const classnames = useGetClassnames([
@@ -81,6 +87,7 @@ export const Span: FC<PropsWithChildren<TextPropTypes>> = ({
     uppercase && styles['text-uppercase'],
     underline && styles['text-underline'],
     inline && styles['text-inline'],
+    font && styles['font-' + font],
   ])
 
   return <span className={classnames}>{children}</span>
@@ -94,6 +101,7 @@ export const Label: FC<PropsWithChildren<TextPropTypes>> = ({
   align = 'left',
   inline,
   underline,
+  font,
   children,
 }) => {
   const classnames = useGetClassnames([
@@ -105,6 +113,7 @@ export const Label: FC<PropsWithChildren<TextPropTypes>> = ({
     uppercase && styles['text-uppercase'],
     underline && styles['text-underline'],
     inline && styles['text-inline'],
+    font && styles['font-' + font],
   ])
 
   return <label className={classnames}>{children}</label>
@@ -122,6 +131,7 @@ export const Anchor: FC<PropsWithChildren<AnchorPropTypes>> = ({
   align = 'left',
   inline,
   underline,
+  font,
   href,
   children,
 }) => {
@@ -134,6 +144,7 @@ export const Anchor: FC<PropsWithChildren<AnchorPropTypes>> = ({
     uppercase && styles['text-uppercase'],
     underline && styles['text-underline'],
     inline && styles['text-inline'],
+    font && styles['font-' + font],
   ])
 
   return (
