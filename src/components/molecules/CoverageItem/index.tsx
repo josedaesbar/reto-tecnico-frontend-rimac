@@ -89,7 +89,6 @@ const CoverageItem = ({data}: CoverageItemProps) => {
 
         {isTextVisible && (
           <Paragraph color='gray' size='14'>
-            {userCoverages.amount}
             {data.description}
           </Paragraph>
         )}
